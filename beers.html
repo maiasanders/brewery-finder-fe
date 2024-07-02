@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brewery Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 </head>
@@ -19,17 +22,20 @@
             <li><a href="#" id="breweries-home">Breweries</a></li>
             <li><a href="#" id="beers-home">Beers</a></li>
             <li><a href="#" id="events-home">Events</a></li>
-            <li><a href="#" id="login-out">Logout</a></li>
+            <li id="login-out"><a href="#">Logout</a></li>
         </ul>
     </nav>
     <aside id="filter-options">
         <form action="http://localhost:8080/breweries/1/beers" method="get">
             <input type="search" id="q" name="q" placeholder="Filter..." />
-            <div>&nbsp;</div>
-            <label for="abv-min">ABV: </label>
-            <input type="number" id="abv-min" name="abv-min" placeholder="min">
-            <label for="abv-max"> - </label>
-            <input type="number" id="abv-max" name="abv-max" placeholder="max">
+            <!-- <div>&nbsp;</div> -->
+            <div class="range-input">
+                <label for="abv-min">ABV: </label>
+                <input type="number" id="abv-min" name="abv-min" placeholder="min">
+                <label for="abv-max"> - </label>
+                <input type="number" id="abv-max" name="abv-max" placeholder="max">
+            </div>
+            <!-- <div>&nbsp;</div> -->
             <input type="submit" id="update" name="update" value="Update filters">
         </form>
     </aside>
@@ -37,6 +43,12 @@
         <article id="brewery-info">
             <!-- TODO flesh out brewery info -->
             <h2 id="brewery-name">Brewery Name</h2>
+            <div id="external-links">
+                <a href="#" id="official-site">Official Site</a>
+                <a href="#" id="facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" id="x"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#" id="insta"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
             <section id="brewery-address">
                 <p>123 Main St</p>
                 <p>Sometown, USA 11111</p>
@@ -45,15 +57,94 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti iste aliquid, tempora sequi vel et reiciendis quasi corrupti, quia sed eius quae, voluptas similique in est facere ipsum soluta!</p>
             </section>
             <section id="brewery-details">
-                
+                <ul>
+                    <li id="serves-food">Serves food &#9989</li>
+                    <li id="food-truck">Food trucks &#10060</li>
+                    <li id="kids">Kid friendly &#9989</li>
+                    <li id="dogs">Dog friendly &#9989</li>
+                    <li id="daysOpen">Tu W Th F Sa Su</li>
+                    <li id="hours">12:00 PM - 2:00 AM</li>
+                </ul>
             </section>
         </article>
         <article id="beer-list">
             <!-- TODO add beer cards -->
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="beer-card">
+                <h3 class="beer-name">Beer1 Name</h3>
+                <img src="img/600x400.svg" class="beer-img">
+                <ul class="beer-buttons">
+                    <li><i class="fa-regular fa-thumbs-up"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
         </article>
     </main>
     <footer>
-        <p>&copy;2024 BreweryFinder, Maia Sanders</p>
+        <p>&copy; 2024 BreweryFinder, Maia Sanders</p>
     </footer>
 
 </body>

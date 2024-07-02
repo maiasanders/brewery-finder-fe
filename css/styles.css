@@ -1,0 +1,145 @@
+body {
+    background-color: #EDECE1;
+    color: #200F3B;
+    font-family: Helvetica, Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #200F3B;
+}
+
+
+/* Aside styling */
+aside {
+    width: 200px;
+    background-color: #D8D5AA;
+    position: fixed;
+    left: 0;
+    top: 110px;
+    height: 100%;
+}
+aside > form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    padding: 1em;
+}
+aside input {
+    max-width: 80%;
+    background-color: #EDECE1;
+    border: 1px solid #B5B185;
+    padding: 0 1em 0 1em;
+    height: 30px;
+    border-radius: 15px;
+}
+aside .range-input {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.range-input > input {
+    width: 3em;
+}
+
+
+/* Header Styling */
+header {
+    background-color: #B5B185;
+    display: flex;
+    font-family: "Antonio", sans-serif;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1em 0 1em;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#logo {
+    width: 100px;
+}
+#pfp {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-left: auto;
+}
+
+
+/* site nav styling */
+#site-nav {
+    background-color: #D8D5AA;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+}
+#site-nav > ul {
+    list-style: none;
+    display: flex;
+    margin: 5px;
+    
+    justify-content: start;
+    gap: 1.5em;
+}
+#login-out {
+    margin-left: auto;
+}
+
+
+/* Main section styling */
+main {
+    position: relative;
+    top: 110px;
+    left: 200px;
+}
+
+/* Brewery info styling */
+#brewery-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name address"
+                        "social address"
+                        "about details";
+}
+#brewery-name {
+    grid-area: name;
+    font-family: "Antonio", sans-serif;
+}
+#brewery-address {
+    grid-area: address;
+}
+#about-us {
+    grid-area: about;
+}
+#brewery-details {
+    grid-area: details;
+}
+#brewery-details ul {
+    list-style: none;
+}
+
+
+
+/* Footer styling */
+footer {
+    background-color: #D8D5AA;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding-left: 1em;
+    height: 25px;
+}
+footer > p {
+    padding: 0;
+    margin: .25em;
+}
