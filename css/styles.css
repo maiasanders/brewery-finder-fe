@@ -211,13 +211,18 @@ footer > p {
     padding: 10px;
     background-color: #f2f1e9;
     box-shadow: 2px 2px 2px #00000030;
+    width: 260px;
+    display: grid;
 }
 .beer-card:hover {
     background-color: #f6f5ef;
     box-shadow: 2px 2px 2px #00000062;
 }
 .beer-img {
-    width: 250px;
+    max-width: 250px;
+    max-height: 166px;
+    object-fit: cover;
+    justify-self: center;
 }
 .beer-buttons {
     list-style: none;
@@ -237,23 +242,13 @@ li.save-beer {
 
 /* MEDIA QUERIES */
 
-/* Cell layouts */
-@media only screen and (max-width: 425px){
+/* Tablet layout */
+@media only screen and (max-width: 830px) {
     body {
         grid-template-columns: 1fr;
         grid-template-areas: "header"
                             "main"
                             "footer";
-    }
-    #logo {
-        display: none;
-    }
-    #site-nav ul {
-        justify-content: space-between;
-        gap: 0;
-    }
-    #login-out {
-        margin-left: 0;
     }
     aside {
         width: 100%;
@@ -266,17 +261,31 @@ li.save-beer {
         gap: .5em;
         justify-content: space-between;
     }
-    aside input {
-        max-width: 8em;
-    }
-    aside .range-input {
-        gap: .1em;
-    }
     #q {
         order: -1;
     }
     #update {
         order: -1;
+    }
+}
+
+/* Cell layouts */
+@media only screen and (max-width: 425px){
+    #logo {
+        display: none;
+    }
+    #site-nav ul {
+        justify-content: space-between;
+        gap: 0;
+    }
+    #login-out {
+        margin-left: 0;
+    }
+    aside input {
+        max-width: 8em;
+    }
+    aside .range-input {
+        gap: .1em;
     }
     
     main {

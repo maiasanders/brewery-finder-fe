@@ -28,6 +28,7 @@ async function onDomLoaded() {
     setBreweryInfo();
     
     const beerList = document.getElementById('beer-list');
+    beers.forEach(createBeerCard);
 
 
 
@@ -92,8 +93,26 @@ async function onDomLoaded() {
 
         // add image
         const beerPic = document.createElement('img');
-        // beerPic.setAttribute('src', beer.)
+        beerPic.setAttribute('src', beer.imgUrl);
+        beerPic.classList.add('beer-img');
+        card.appendChild(beerPic);
+        
+        // add icons
+        // TODO refactor to utilize other tables/endpts
+        const beerButtons = document.createElement('ul');
+        beerButtons.classList.add('beer-buttons');
+        card.appendChild(beerButtons);
 
+        const comment = document.createElement('li');
+        comment.classList.add('comment');
+        comment.innerHTML = '<i class="fa-regular fa-comment"></i>';
+        beerButtons.appendChild(comment);
+
+        const save = document.createElement('li');
+        save.classList.add('save-beer');
+        save.innerHTML = '<i class="fa-regular fa-heart"></i>';
+        beerButtons.appendChild(save)
+        
     }
 
 }
