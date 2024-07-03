@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <script type="module" src="script/api-service.js"></script>
 </head>
 <body>
     <header>
@@ -42,7 +43,7 @@
     <main>
         <article id="brewery-info">
             <!-- TODO flesh out brewery info -->
-            <h2 id="brewery-name">Brewery Name</h2>
+            <!-- <h2 id="brewery-name">Brewery Name</h2> -->
             <div id="external-links">
                 <a href="#" id="official-site">Official Site</a>
                 <a href="#" id="facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -50,19 +51,18 @@
                 <a href="#" id="insta"><i class="fa-brands fa-square-instagram"></i></a>
             </div>
             <section id="brewery-address">
-                <p>123 Main St</p>
-                <p>Sometown, USA 11111</p>
+                <!-- <p>123 Main St</p><p>Sometown, USA 11111</p> -->
             </section>
             <section id="about-us">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti iste aliquid, tempora sequi vel et reiciendis quasi corrupti, quia sed eius quae, voluptas similique in est facere ipsum soluta!</p>
             </section>
             <section id="brewery-details">
                 <ul>
-                    <li id="serves-food">Serves food &#9989</li>
-                    <li id="food-truck">Food trucks &#10060</li>
-                    <li id="kids">Kid friendly &#9989</li>
-                    <li id="dogs">Dog friendly &#9989</li>
-                    <li id="daysOpen">Tu W Th F Sa Su</li>
+                    <li id="serves-food">Serves food </li>
+                    <li id="food-truck">Food trucks </li>
+                    <li id="kids">Kid friendly </li>
+                    <li id="dogs">Dog friendly </li>
+                    <li id="days-open"></li>
                     <li id="hours">12:00 PM - 2:00 AM</li>
                 </ul>
             </section>
@@ -75,7 +75,7 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
@@ -84,7 +84,7 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
@@ -93,7 +93,7 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
@@ -102,7 +102,7 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
@@ -111,7 +111,7 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
@@ -120,7 +120,7 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
@@ -129,16 +129,16 @@
                 <ul class="beer-buttons">
                     <li><i class="fa-regular fa-thumbs-up"></i></li>
                     <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart"></i></li>
                 </ul>
             </div>
             <div class="beer-card">
                 <h3 class="beer-name">Beer1 Name</h3>
                 <img src="img/600x400.svg" class="beer-img">
                 <ul class="beer-buttons">
-                    <li><i class="fa-regular fa-thumbs-up"></i></li>
-                    <li><i class="fa-regular fa-thumbs-down"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><i class="fa-regular fa-thumbs-up icons"></i></li>
+                    <li><i class="fa-regular fa-thumbs-down icons"></i></li>
+                    <li class="save-beer"><i class="fa-regular fa-heart icons"></i></li>
                 </ul>
             </div>
         </article>
