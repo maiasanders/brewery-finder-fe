@@ -9,19 +9,28 @@ document.addEventListener('DOMContentLoaded', onDomLoaded);
 
 async function onDomLoaded() {
 
+    // Make API calls and assign values to variables
     const loginResponse = await login('http://localhost:8080/login', 'user', 'password');
     const token = loginResponse.body.token;
+    
     const breweryResponse = await fetchGet('http://localhost:8080/breweries/1', token);
+    const brewery = breweryResponse.body;
+    
     const beersResponse = await fetchGet('http://localhost:8080/breweries/1/beers', token)
+    const beers = beersResponse.body;
 
     console.log(breweryResponse.statusCode);
-    console.log(breweryResponse.body);
+    console.log(beersResponse.body);
     console.log(loginResponse.body.token);
 
-    const brewery = breweryResponse.body;
-    // console.log(brewery);
+
+    // Call fns to add retrieved data to DOM
     setBreweryInfo();
     
+    const beerList = document.getElementById('beer-list');
+
+
+
 
     function setBreweryInfo() {
         
@@ -66,6 +75,25 @@ async function onDomLoaded() {
         daysOpen.innerText = `Open: ${daysOpenStr}`
         const hours = document.getElementById('hours');
         hours.innerText = `${brewery.openTime} - ${brewery.closeTime}`;
+    }
+
+    function createBeerCard(beer) {
+        
+        // create card
+        const card = document.createElement('div');
+        card.classList.add('beer-card');
+        beerList.appendChild(card);
+
+        // add name
+        const beerName = document.createElement('h3');
+        beerName.classList.add('beer-name')
+        beerName.innerText = beer.beerName;
+        card.appendChild(beerName);
+
+        // add image
+        const beerPic = document.createElement('img');
+        // beerPic.setAttribute('src', beer.)
+
     }
 
 }
